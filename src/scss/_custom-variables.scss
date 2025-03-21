@@ -1,0 +1,90 @@
+// Overwrite Bootstrap's variables here
+// You can find them in node_modules/bootstrap/scss/_variables.scss
+// Copy the variables you need into this file, don't modify files under node_modules/
+
+// Some example variables that you can uncomment:
+
+// Enabling shadows and gradients
+//$enable-shadows: true;
+$enable-gradients: false; 
+
+
+// Pallete
+// $misty-rose: rgb(229, 253, 255);
+// $pink: rgb(194, 241, 255);
+// $bakermiller-pink: rgb(153, 214, 255);
+// $bright-pink-crayola: rgb(96, 207, 251);
+// $darkest-pink: #5bd1ee;
+
+$misty-rose: #ffe5ecff;
+$pink: #ffc2d1ff;
+$bakermiller-pink: #ff99b3ff;
+$bright-pink-crayola: #fb6087ff;
+$darkest-pink: #ee5b80;
+$dark-rose: #b1445f;
+
+$columbia-blue: #d3f0ffff;
+$uranian-blue: #ade2ffff;
+$light-sky-blue: #70cdffff;
+$picton-blue: #33b8ffff;
+$darkest-blue: #1f709b;
+$chathams-blue: #175272;
+
+$rich-black: #001e38;
+
+// Theme colors
+$primary-lighter: $misty-rose;
+$primary-light: $pink;
+$primary: $bakermiller-pink;
+$primary-dark: $bright-pink-crayola;
+$primary-darker: $darkest-pink;
+$primary-darkest: $dark-rose;
+
+$secondary-lighter: $columbia-blue;
+$secondary-light: $uranian-blue;
+$secondary: $light-sky-blue;
+$secondary-dark: $picton-blue;
+$secondary-darker: $darkest-blue;
+$secondary-darkest: $chathams-blue;
+
+$light: #FAF9F6;
+$dark: $rich-black;
+
+// Element colors
+$body-bg: $secondary-lighter;
+$body-color: $dark;
+
+$body-bg-dm: $rich-black;
+$body-color-dm: $light;
+
+// Alert colors
+$success: $secondary-darker;
+$info: $secondary-dark;
+$warning: #fccc3d;
+$danger: $primary-dark;
+
+
+// Adding (!) an additional theme color (ex. classes btn-cool, bg-cool)
+$theme-colors: (
+    "primary-lighter": $primary-lighter,
+    "primary-light": $primary-light,
+    "primary": $primary,
+    "primary-darker": $primary-darker,
+    "primary-darkest": $primary-darkest,
+
+    "secondary-lighter": $secondary-lighter,  
+    "secondary-light": $secondary-light,  
+    "secondary": $secondary,  
+    "secondary-darker": $secondary-darker,  
+    "secondary-darkest": $secondary-darkest, 
+
+    "light": $light,
+    "light-accent": darken($light, 10%),
+    "dark": $dark,
+    "dark-accent": darken($dark, 2%),
+    
+    "success": $success,
+    "info": $info,
+    "warning": $warning,
+    "danger": $danger
+);

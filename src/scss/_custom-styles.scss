@@ -1,0 +1,54 @@
+// Add additional styles here. For example, overwrite certain styles or add new components.
+// Tip: You can use bootstrap's powerful mixins here!
+
+
+//.alert-myalert {
+//  @include alert-variant(#60667d, #1d1d1d, #f4fdff);
+//}
+
+//@each $color, $value in $theme-colors {
+//  .alert-#{$color} {
+//    box-shadow: 3px 3px theme-color-level($color, -3);
+//  }
+//}
+.nextjs-toast-errors-parent {
+    display: none !important;
+}  
+
+.form-signin {
+    max-width: 330px;
+    padding: 1rem;
+}
+.wrapper {
+    max-width: 550px;
+}
+
+.fw-500 {
+    font-weight: 500;
+}
+
+.fw-700 {
+    font-weight: 700;
+}
+
+html {
+    height: 100%; 
+    font-family: 'Roboto', sans-serif;
+
+    body {
+        height: 100%;
+        background-color: $body-bg;
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
+*.dm {
+    background-color: $body-bg-dm;
+    color: $body-color-dm
+}
+
+.font-fancy {
+    font-family: 'Glass Antiqua', 'Glass Antiqua Fallback', cursive;
+    font-weight: 400;
+    font-style: normal;
+}
