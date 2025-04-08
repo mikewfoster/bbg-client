@@ -18,7 +18,7 @@ export default async function RedeemReward( {params} ) {
     let task = {};
 
     if (user_id && token) {
-        const API_ROOT = `${process.env.API_URL}`;    
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;    
         const TASK_URL = `${API_ROOT}/tasks/${id}`;
 
         await fetch(TASK_URL, {
@@ -46,7 +46,7 @@ export default async function RedeemReward( {params} ) {
     const updateTask = async (data) => {
         "use server"
 
-        const API_ROOT = `${process.env.API_URL}`;    
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;    
         const TASK_URL = `${API_ROOT}/tasks/${data.get('id')}/accept`;
 
         const body = {

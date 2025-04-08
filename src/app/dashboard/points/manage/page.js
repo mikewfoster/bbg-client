@@ -23,7 +23,7 @@ export default async function ManageDashboard() {
 
     let points = [];
 
-    const API_ROOT = `${process.env.API_URL}`;    
+    const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;    
     const POINTS_URL = `${API_ROOT}/points`;
 
     if (user_id && token) {    

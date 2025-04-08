@@ -21,7 +21,7 @@ export default async function User( {params} ) {
     let points = [];
 
     if (user_id && token) {
-        const API_ROOT = `${process.env.API_URL}`;        
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;        
         const USERS_URL = `${API_ROOT}/users/${id}`;
         const POINTS_URL = `${API_ROOT}/users/${id}/points`;
 

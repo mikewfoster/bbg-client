@@ -16,7 +16,7 @@ export default async function RedeemReward( {params} ) {
     const username = access?.username;
 
     let reward = {};
-    const API_ROOT = `${process.env.API_URL}`; 
+    const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`; 
 
     if (user_id && token) {   
         const REWARD_URL = `${API_ROOT}/rewards/${id}`;

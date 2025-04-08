@@ -17,7 +17,7 @@ export default async function ClaimPoint( {params} ) {
 
     let point = {};
 
-    const API_ROOT = `${process.env.API_URL}`;     
+    const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;     
 
     if (user_id && token) {   
         const POINT_URL = `${API_ROOT}/points/${id}`;

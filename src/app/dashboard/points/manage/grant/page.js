@@ -19,7 +19,7 @@ export default async function Grant( { searchParams } ) {
     let points = [];
     let rewards = [];
 
-    const API_ROOT = `${process.env.API_URL}`;
+    const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;
 
     if (user_id && token) {        
         const USERS_URL = `${API_ROOT}/users/`;

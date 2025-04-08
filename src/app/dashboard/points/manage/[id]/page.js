@@ -16,7 +16,7 @@ export default async function ManagePoint( {params} ) {
     const username = access?.username;
     
     let point = {};
-    const API_ROOT = `${process.env.API_URL}`;        
+    const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;        
     const USERS_URL = `${API_ROOT}/users/${user_id}`;
 
     if (user_id && token) {

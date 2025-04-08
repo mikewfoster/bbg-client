@@ -13,7 +13,7 @@ export default async function Users( {} ) {
     let users = [];
 
     if (user_id && token) {
-        const API_ROOT = `${process.env.API_URL}`;
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;
         const USERS_URL = `${API_ROOT}/users/`;
 
         await fetch(USERS_URL, {

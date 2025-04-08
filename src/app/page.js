@@ -19,7 +19,7 @@ export default function Home() {
     const checkData = async (obj) => {
         const { username, password } = data;
 
-        const API_ROOT = `${process.env.API_URL}`;        
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;        
         const LOGIN_URL = `${API_ROOT}/auth/`;
 
         const body = {

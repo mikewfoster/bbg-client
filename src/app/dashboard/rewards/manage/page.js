@@ -22,7 +22,7 @@ export default async function ManageDashboard() {
     const username = access?.username;
 
     let rewards = [];
-    const API_ROOT = `${process.env.API_URL}`;  
+    const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;  
     const REWARDS_URL = `${API_ROOT}/rewards/`;
 
     if (user_id && token) {      
