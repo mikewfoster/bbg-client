@@ -21,7 +21,7 @@ export default async function Spend() {
     let user = {};
 
     if (user_id && token) {
-        const API_ROOT = `${process.env.API_URL}:${process.env.API_PORT}`;        
+        const API_ROOT = `${process.env.API_URL}`;        
         const USERS_URL = `${API_ROOT}/users/${user_id}`;
         const REWARD_URL = `${API_ROOT}/rewards/`;
 

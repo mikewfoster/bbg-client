@@ -19,9 +19,9 @@ export default async function Grant( { searchParams } ) {
     let points = [];
     let rewards = [];
 
-    if (user_id && token) {
-        const API_ROOT = `${process.env.API_URL}:${process.env.API_PORT}`;
-        
+    const API_ROOT = `${process.env.API_URL}`;
+
+    if (user_id && token) {        
         const USERS_URL = `${API_ROOT}/users/`;
         const POINTS_URL = `${API_ROOT}/points/`;
         const REWARDS_URL = `${API_ROOT}/rewards/`;
@@ -94,7 +94,7 @@ export default async function Grant( { searchParams } ) {
     const adjustPoints = async (data) => {
         "use server"
 
-        const POINTS_URL = `http://localhost:5000/users/${data.get('user_id')}/points`;
+        const POINT_URL = `${API_ROOT}/users/${data.get('user_id')}/points`;
         const pointId = data.get('point_id') || null;
         const rewardId = data.get('reward_id') || null;
 
@@ -104,7 +104,7 @@ export default async function Grant( { searchParams } ) {
         if (pointId) body.PointId = pointId;
         if (rewardId) body.RewardId = rewardId;
 
-        fetch(POINTS_URL, {
+        fetch(POINT_URL, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${data.get('token')}`,

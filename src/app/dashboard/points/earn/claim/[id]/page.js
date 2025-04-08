@@ -17,8 +17,10 @@ export default async function ClaimPoint( {params} ) {
 
     let point = {};
 
-    if (user_id && token) {
-        const POINT_URL = `http://localhost:5000/points/${id}`;
+    const API_ROOT = `${process.env.API_URL}`;     
+
+    if (user_id && token) {   
+        const POINT_URL = `${API_ROOT}/points/${id}`;
 
         await fetch(POINT_URL, {
             method: "GET",
@@ -45,7 +47,7 @@ export default async function ClaimPoint( {params} ) {
     const claimPoint = async (data) => {
         "use server"
 
-        const TASK_URL = `http://localhost:5000/tasks`;
+        const TASK_URL = `${API_ROOT}/tasks`;
 
         const body = {
             username: data.get('username'),

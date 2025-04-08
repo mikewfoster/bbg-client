@@ -19,7 +19,7 @@ export default async function Users( {} ) {
     let tasks = [];
 
     if (user_id && token) {
-        const API_ROOT = `${process.env.API_URL}:${process.env.API_PORT}`;
+        const API_ROOT = `${process.env.API_URL}`;
         const TASKS_URL = `${API_ROOT}/tasks/`;
 
         await fetch(TASKS_URL, {

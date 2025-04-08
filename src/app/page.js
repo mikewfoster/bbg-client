@@ -19,7 +19,8 @@ export default function Home() {
     const checkData = async (obj) => {
         const { username, password } = data;
 
-        const LOGIN_URL = "http://localhost:5000/auth/";
+        const API_ROOT = `${process.env.API_URL}`;        
+        const LOGIN_URL = `${API_ROOT}/auth/`;
 
         const body = {
             username: username,

@@ -23,10 +23,12 @@ export default async function ManageDashboard() {
 
     let points = [];
 
-    if (user_id && token) {
-        const LOGIN_URL = `http://localhost:5000/points`;
+    const API_ROOT = `${process.env.API_URL}`;    
+    const POINTS_URL = `${API_ROOT}/points`;
 
-        await fetch(LOGIN_URL, {
+    if (user_id && token) {    
+
+        await fetch(POINTS_URL, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -50,8 +52,6 @@ export default async function ManageDashboard() {
     const addPoint = async (data) => {
         "use server"
 
-        const LOGIN_URL = "http://localhost:5000/points/";
-
         const body = {
             username: data.get('username'),
             title: data.get('title'),
@@ -59,7 +59,7 @@ export default async function ManageDashboard() {
             value: data.get('value')
         };
 
-        fetch(LOGIN_URL, {
+        fetch(POINTS_URL, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${data.get('token')}`,

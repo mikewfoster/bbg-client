@@ -13,7 +13,7 @@ export default async function Dashboard() {
     let user = [];
 
     if (user_id && token) {
-        const API_ROOT = `${process.env.API_URL}:${process.env.API_PORT}`;        
+        const API_ROOT = `${process.env.API_URL}`;        
         const USERS_URL = `${API_ROOT}/users/${user_id}`;
 
         await fetch(USERS_URL, {

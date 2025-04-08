@@ -16,11 +16,13 @@ export default async function ManagePoint( {params} ) {
     const username = access?.username;
     
     let point = {};
+    const API_ROOT = `${process.env.API_URL}`;        
+    const USERS_URL = `${API_ROOT}/users/${user_id}`;
 
     if (user_id && token) {
-        const LOGIN_URL = `http://localhost:5000/points/${id}`;
+        const POINTS_URL = `${API_ROOT}/points/${id}`;
 
-        await fetch(LOGIN_URL, {
+        await fetch(POINTS_URL, {
             method: "GET",
             headers: {
                 Authorization: `Bearer ${token}`,
@@ -45,7 +47,7 @@ export default async function ManagePoint( {params} ) {
     const editPoint = async (data) => {
         "use server"
 
-        const LOGIN_URL = `http://localhost:5000/points/${data.get('id')}`;
+        const EDIT_URL = `${API_ROOT}/points/${data.get('id')}`;
 
         const body = {
             username: data.get('username'),
@@ -55,7 +57,7 @@ export default async function ManagePoint( {params} ) {
             id: data.get('user_id'),
         };
 
-        fetch(LOGIN_URL, {
+        fetch(EDIT_URL, {
             method: "PATCH",
             headers: {
                 Authorization: `Bearer ${data.get('token')}`,

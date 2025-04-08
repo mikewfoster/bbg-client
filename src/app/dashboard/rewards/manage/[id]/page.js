@@ -17,8 +17,10 @@ export default async function ManagePoint( {params} ) {
     
     let reward = {};
 
-    if (user_id && token) {
-        const REWARD_URL = `http://localhost:5000/rewards/${id}`;
+    const API_ROOT = `${process.env.API_URL}`;     
+
+    if (user_id && token) {    
+        const REWARD_URL = `${API_ROOT}/rewards/${id}`;
 
         await fetch(REWARD_URL, {
             method: "GET",
@@ -45,7 +47,7 @@ export default async function ManagePoint( {params} ) {
     const editReward = async (data) => {
         "use server"
 
-        const REWARD_URL = `http://localhost:5000/rewards/${data.get('id')}`;
+        const EDIT_URL = `${API_ROOT}/rewards/${data.get('id')}`;
 
         const body = {
             username: data.get('username'),
@@ -56,7 +58,7 @@ export default async function ManagePoint( {params} ) {
             id: data.get('user_id'),
         };
 
-        fetch(REWARD_URL, {
+        fetch(EDIT_URL, {
             method: "PATCH",
             headers: {
                 Authorization: `Bearer ${data.get('token')}`,

@@ -22,9 +22,10 @@ export default async function ManageDashboard() {
     const username = access?.username;
 
     let rewards = [];
+    const API_ROOT = `${process.env.API_URL}`;  
+    const REWARDS_URL = `${API_ROOT}/rewards/`;
 
-    if (user_id && token) {
-        const REWARDS_URL = `http://localhost:5000/rewards`;
+    if (user_id && token) {      
 
         await fetch(REWARDS_URL, {
             method: "GET",
@@ -50,8 +51,6 @@ export default async function ManageDashboard() {
     const addReward = async (data) => {
         "use server"
 
-        const POINT_URL = "http://localhost:5000/rewards/";
-
         const body = {
             username: data.get('username'),
             title: data.get('title'),
@@ -60,7 +59,7 @@ export default async function ManageDashboard() {
             value: data.get('value')
         };
 
-        fetch(POINT_URL, {
+        fetch(REWARDS_URL, {
             method: "POST",
             headers: {
                 Authorization: `Bearer ${data.get('token')}`,

@@ -16,9 +16,9 @@ export default async function RedeemReward( {params} ) {
     const username = access?.username;
 
     let reward = {};
+    const API_ROOT = `${process.env.API_URL}`; 
 
-    if (user_id && token) {
-        const API_ROOT = `${process.env.API_URL}:${process.env.API_PORT}`;    
+    if (user_id && token) {   
         const REWARD_URL = `${API_ROOT}/rewards/${id}`;
 
         await fetch(REWARD_URL, {
@@ -46,7 +46,7 @@ export default async function RedeemReward( {params} ) {
     const redeemReward = async (data) => {
         "use server"
 
-        const TASK_URL = `http://localhost:5000/tasks/`;
+        const TASK_URL = `${API_ROOT}/tasks/`;
 
         const body = {
             username: data.get('username'),
