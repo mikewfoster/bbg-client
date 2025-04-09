@@ -27,7 +27,6 @@ export default async function ManageDashboard() {
     const POINTS_URL = `${API_ROOT}/points`;
 
     if (user_id && token) {    
-
         await fetch(POINTS_URL, {
             method: "GET",
             headers: {
@@ -51,6 +50,8 @@ export default async function ManageDashboard() {
 
     const addPoint = async (data) => {
         "use server"
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;    
+        const POINTS_URL = `${API_ROOT}/points`;
 
         const body = {
             username: data.get('username'),

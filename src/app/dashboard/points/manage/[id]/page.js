@@ -16,8 +16,7 @@ export default async function ManagePoint( {params} ) {
     const username = access?.username;
     
     let point = {};
-    const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;        
-    const USERS_URL = `${API_ROOT}/users/${user_id}`;
+    const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;    
 
     if (user_id && token) {
         const POINTS_URL = `${API_ROOT}/points/${id}`;
@@ -47,6 +46,7 @@ export default async function ManagePoint( {params} ) {
     const editPoint = async (data) => {
         "use server"
 
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;   
         const EDIT_URL = `${API_ROOT}/points/${data.get('id')}`;
 
         const body = {

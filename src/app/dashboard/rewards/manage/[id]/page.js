@@ -47,6 +47,7 @@ export default async function ManagePoint( {params} ) {
     const editReward = async (data) => {
         "use server"
 
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;   
         const EDIT_URL = `${API_ROOT}/rewards/${data.get('id')}`;
 
         const body = {

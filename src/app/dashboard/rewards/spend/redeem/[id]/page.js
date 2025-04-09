@@ -46,6 +46,7 @@ export default async function RedeemReward( {params} ) {
     const redeemReward = async (data) => {
         "use server"
 
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;   
         const TASK_URL = `${API_ROOT}/tasks/`;
 
         const body = {

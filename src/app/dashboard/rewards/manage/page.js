@@ -51,6 +51,9 @@ export default async function ManageDashboard() {
     const addReward = async (data) => {
         "use server"
 
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;   
+        const REWARDS_URL = `${API_ROOT}/rewards/`;
+        
         const body = {
             username: data.get('username'),
             title: data.get('title'),

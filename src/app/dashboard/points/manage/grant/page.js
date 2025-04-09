@@ -94,6 +94,7 @@ export default async function Grant( { searchParams } ) {
     const adjustPoints = async (data) => {
         "use server"
 
+        const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;   
         const POINT_URL = `${API_ROOT}/users/${data.get('user_id')}/points`;
         const pointId = data.get('point_id') || null;
         const rewardId = data.get('reward_id') || null;
