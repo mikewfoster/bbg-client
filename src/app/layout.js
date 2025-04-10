@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Header from "@/components/template/Header";
+import Game from "@/components/extras/Game";
+
+import { headers } from "next/headers";
 
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
@@ -25,7 +28,9 @@ const roboto = Roboto({
   display: 'swap',
 })
 
+
 export default function RootLayout({ children }) {
+
   return (
       <html lang="en" className={`${glass_antiqua.className} ${roboto.className}`}>
         <Head>
@@ -33,6 +38,7 @@ export default function RootLayout({ children }) {
         <body>
           <Header />
           {children}
+          <Game />
         </body>
       </html>
   );

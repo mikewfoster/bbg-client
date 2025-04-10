@@ -11,10 +11,16 @@ export default async function Dashboard() {
     const role_id = access?.role;
 
     let user = [];
+    const currentDate = new Date(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}));
+    
+    let show_game = (currentDate <= new Date('04/20/25'));
+    let game_active = true;
+    
 
     if (user_id && token) {
         const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;        
         const USERS_URL = `${API_ROOT}/users/${user_id}`;
+        const POINTS_URL = `${API_ROOT}/users/${user_id}/points`;  
 
         await fetch(USERS_URL, {
             method: "GET",
@@ -30,6 +36,31 @@ export default async function Dashboard() {
             })
             .then((result) => {
                 user = result.profile.user;
+            })
+            .catch((error) => {
+                setTimeout(() => {
+                }, 1000);
+            });
+            
+        await fetch(POINTS_URL, {
+            method: "GET",
+            headers: {
+                Authorization: `Bearer ${token}`,
+                "content-type": "application/json",
+            },
+        })
+            .then((response) => {
+                if (response.ok) {
+                    return response.json();
+                }
+            })
+            .then((result) => {
+                points = result.points;
+                const easterPoints = points.filter(point => (point.title == 'Easter hunt'))
+
+                if (easterPoints.length >= 20) {
+                    game_active = false;
+                }
             })
             .catch((error) => {
                 setTimeout(() => {
@@ -51,7 +82,30 @@ export default async function Dashboard() {
                             </div>
                         </div>
 
-                        <div className="row g-4 pt-5 text-center">
+                        { show_game && 
+                            <div className="row g-4 pt-4 text-center">
+                                <div className="col"></div>
+                                <div className="col-12 col-md-8">
+                                    { game_active && 
+                                        <div className="alert alert-secondary bg-secondary-lightest p-4">
+                                            <h2 className="fs-1 font-fancy mb-3">A new game is here!</h2>
+                                            <p className="fs-5">A blue bunny could be hiding at the bottom of every page, can you find him?</p>
+                                            <p className="mb-0"><em>The bunny will only be here until Easter, and can only be clicked a certain number of times (20).</em></p>
+                                        
+                                        </div>  
+                                    }
+                                    { !game_active && 
+                                        <div className="alert alert-secondary bg-secondary-lightest p-4">
+                                            <h2 className="fs-1 font-fancy mb-3">Congratulations!</h2>
+                                            <p className="fs-5 mb-0">You earned a total of 200 points for finding all of the bunnies.</p>                                    
+                                        </div>  
+                                    }
+                                </div>
+                                <div className="col"></div>
+                        </div>
+                        }
+
+                        <div className="row g-4 pt-4 text-center">
                             { role_id === 1 &&
                                 <>
                                     <div className="col-12 col-md-4">
