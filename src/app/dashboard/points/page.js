@@ -59,7 +59,6 @@ export default async function Points() {
             })
             .then((result) => {
                 points = result.points;
-                
             })
             .catch((error) => {
                 setTimeout(() => {
@@ -94,7 +93,7 @@ export default async function Points() {
                             </div>
                         </div>
                         
-                        <br />
+                        <br /> 
 
                         <div className="row fs-5 p-1 py-3 bg-primary-lighter rounded mb-2 d-none d-md-flex">
                             <div className="col-2">

@@ -108,6 +108,7 @@ export default async function RedeemReward( {params} ) {
                             </div>
                             <div className="col-8 p-3 bg-secondary-lighter rounded mb-2 text-center">
                                 After you press <strong>Redeem reward</strong> below, daddy will get a notification.
+                                <br /><span className="fs-6"><em>You can also add special notes in the <strong>Note for Daddy</strong> field</em>.</span>
                             </div>
                             <div className="col-2">
                             </div>

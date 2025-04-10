@@ -94,6 +94,10 @@ export default async function Spend() {
                             </div>
                         </div>
 
+                        <br />  
+
+                        <p className="text-center">If you don't find something below that fits, you can always <a href="/dashboard/rewards/manage" className="fw-bold text-secondary-darker">add your own type of reward</a>.</p>
+
                         <br />                
 
                         <div className="row fs-5 p-1 py-3 bg-primary-lighter rounded mb-2 d-none d-md-flex">

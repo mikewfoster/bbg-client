@@ -66,6 +66,7 @@ export default async function ManagePoint( {params} ) {
             body: JSON.stringify(body),
         })
             .then((response) => {
+                
                 if (response.ok) {
                     return response.json();
                 }

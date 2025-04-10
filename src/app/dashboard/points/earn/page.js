@@ -94,6 +94,10 @@ export default async function Earn() {
                             </div>
                         </div>
 
+                        <br />   
+
+                        <p className="text-center">If you don't find something below that fits, you can always <a href="/dashboard/points/manage" className="fw-bold text-secondary-darker">add your own type of points</a></p>
+
                         <br />                      
 
                         <div className="row fs-5 p-1 py-3 bg-secondary-lighter rounded mb-2 d-none d-md-flex">

@@ -41,6 +41,7 @@ export default async function ManageDashboard() {
             })
             .then((result) => {
                 points = result.points;
+                
             })
             .catch((error) => {
                 setTimeout(() => {
@@ -171,7 +172,7 @@ export default async function ManageDashboard() {
                                     <div className="d-inline d-md-none">
                                         <br />
                                     </div>
-                                    <Link href={`/dashboard/points/manage/${point.id}`} className="btn btn-secondary mt-1 bg-light">{ <FontAwesomeIcon icon={faPencil} className="text-secondary-darker" /> } <span className="text-secondary-darkest d-inline d-md-none">Edit</span> </Link>
+                                    { (role_id == 1 || point.create_id == username) && <Link href={`/dashboard/points/manage/${point.id}`} className="btn btn-secondary mt-1 bg-light">{ <FontAwesomeIcon icon={faPencil} className="text-secondary-darker" /> } <span className="text-secondary-darkest d-inline d-md-none">Edit</span> </Link> }
                                 </div>
                             </div>
                         ))}

@@ -180,7 +180,7 @@ export default async function ManageDashboard() {
                                     <div className="d-inline d-md-none">
                                         <br />
                                     </div>
-                                    <Link href={`/dashboard/rewards/manage/${reward.id}`} className="btn btn-primary mt-1 bg-light">{ <FontAwesomeIcon icon={faPencil} className="text-primary-darker" /> } <span className="text-primary-darkest d-inline d-md-none">Edit</span> </Link>
+                                    { (role_id == 1 || reward.create_id == username) && <Link href={`/dashboard/rewards/manage/${reward.id}`} className="btn btn-primary mt-1 bg-light">{ <FontAwesomeIcon icon={faPencil} className="text-primary-darker" /> } <span className="text-primary-darkest d-inline d-md-none">Edit</span> </Link> }
                                 </div>
                             </div>
                         ))}

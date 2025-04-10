@@ -17,9 +17,9 @@ export default async function NavBarLinks({display}) {
     if (display && hasAccess) {
         return (
             <>
-                <a className="text-dark text-decoration-none me-4" href="/dashboard">Home</a>
-                <a className="text-dark text-decoration-none me-4" href={`/dashboard/users/${user_id}`}>Profile</a>
-                <a className="text-dark text-decoration-none" href="/dashboard/points">Points</a>
+                <a className="fs-5 text-dark text-decoration-none me-4" href="/dashboard">Home</a>
+                <a className="fs-5 text-dark text-decoration-none me-4" href={`/dashboard/users/${user_id}`}>Profile</a>
+                <a className="fs-5 text-dark text-decoration-none" href="/dashboard/points">Points</a>
             </>
         )
     } else {

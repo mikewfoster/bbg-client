@@ -17,7 +17,7 @@ export const NavBarOptions = ({display}) => {
                     type="button"
                     text="Logout"
                     onClick={logoutHandler}
-                    classList="ms-4 p-0 border-0 bg-secondary-lighter"
+                    classList="fs-5 ms-4 p-0 border-0 bg-secondary-lighter"
                     theme="none"
                 />
             </>

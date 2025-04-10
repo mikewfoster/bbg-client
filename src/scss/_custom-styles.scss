@@ -38,7 +38,27 @@ html {
     body {
         height: 100%;
         background-color: $body-bg;
+        background-image: url("/bg-pattern-512.png");
+        background-repeat: repeat;
+        background-size: 80%;
+        background-position: center;
         font-family: 'Roboto', sans-serif;
+
+        @media (min-width: 760px) {
+            background-size: 25%;
+        }
+    }
+}
+
+[class*="bg-secondary"],
+[class*="bg-primary"] {
+    background-image: url("/bg-pattern-512.png");
+    background-repeat: repeat;
+    background-size: 80%;
+    background-position: center;
+
+    @media (min-width: 760px) {
+        background-size: 30%;
     }
 }
 
