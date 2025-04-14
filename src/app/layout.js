@@ -35,7 +35,13 @@ export const metadata = {
     title: 'Princess Rewards',
     description: 'Princess Rewards',
     type: 'website',
-    url: 'https://bbg.fostercd.com'
+    url: 'https://bbg.fostercd.com',
+    images: [{
+      alt: "Princess Rewards",
+      width: 1200,
+      height: 630,
+      url: '/brand/bbg_og_main.jpg'
+    }] 
   },
   other: {
     "theme-color": "#173571",
