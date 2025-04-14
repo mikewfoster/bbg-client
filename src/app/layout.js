@@ -9,6 +9,7 @@ import '@fortawesome/fontawesome-svg-core/styles.css'
 config.autoAddCss = false
 
 export const metadata = {
+  metadataBase: new URL('https://bbg.fostercd.com'),
   title: 'Princess Rewards',
   description: 'Princess Rewards',
   icons: {
