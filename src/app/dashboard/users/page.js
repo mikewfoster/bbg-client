@@ -3,6 +3,11 @@ import Link from 'next/link'
 
 import { SubNav } from "@/components/template/parts/SubNav";
 
+export const metadata = {
+    title: 'Users ⑅ Princess Rewards',
+    description: 'Users ⑅ Princess Rewards',
+}
+
 export default async function Users( {} ) {
     const cookieStore = await cookies();
     const token = cookieStore.get("token").value;

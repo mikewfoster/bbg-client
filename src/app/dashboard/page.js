@@ -3,6 +3,11 @@ import { cookies } from 'next/headers';
 import Link from 'next/link'
 import { Card } from "@/components/template/parts/dashboard/Card";
 
+export const metadata = {
+    title: 'Dashboard ⑅ Princess Rewards',
+    description: 'Dashboard ⑅ Princess Rewards',
+}
+
 export default async function Dashboard() {   
     const cookieStore = await cookies();
     const token = cookieStore.get("token").value;

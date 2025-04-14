@@ -43,7 +43,7 @@ async function Game () {
                 if (easterPoints.length >= 20 || !show_game) {
                     game_active = false;
                 } else {
-                    game_active = (Math.random() <= 0.4)
+                    game_active = (Math.random() <= 0.5)
                 }
             })
             .catch((error) => {
@@ -102,9 +102,9 @@ async function Game () {
                         <input type="hidden" name="user_id" id="user_id" value={user_id} />
                         <input type="hidden" name="token" id="token" value={token} />
                         <input type="hidden" name="game" id="game" value="Easter hunt" />
-
                         <Button
                             type="submit"
+                            id="bunny"
                             text={ <img src={"/bunny-game.png"} /> }
                             theme=""
                             classList="mt-3 border-0"

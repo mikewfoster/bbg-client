@@ -5,6 +5,11 @@ import { SubNav } from "@/components/template/parts/SubNav";
 import InputText from "@/components/form/InputText";
 import Button from "@/components/form/Button";
 
+export const metadata = {
+    title: 'Tasks ⑅ Princess Rewards',
+    description: 'Tasks ⑅ Princess Rewards',
+}
+
 export default async function RedeemReward( {params} ) {
     const { id } = await params
 

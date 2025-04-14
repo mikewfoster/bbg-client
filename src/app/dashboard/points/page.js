@@ -8,6 +8,10 @@ import { faPlusSquare, faMinusSquare } from '@fortawesome/free-solid-svg-icons';
 
 library.add(faPlusSquare, faMinusSquare); // Add the icon to the library
 
+export const metadata = {
+    title: 'Points ⑅ Princess Rewards',
+    description: 'Points ⑅ Princess Rewards',
+}
 
 export default async function Points() {
     const cookieStore = await cookies();

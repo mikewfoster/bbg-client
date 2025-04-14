@@ -76,3 +76,49 @@ html {
 #game_landing + .game {
     display: none;
 }
+
+.bunny_wrapper {
+    position: relative;
+}
+
+#bunny_down {
+    opacity: 0;
+    transition: all .25s linear;
+    position: absolute;
+}
+
+#bunny {
+    opacity: 1;
+    transition: all .15s linear;
+    /* Apply the pulse animation */
+    animation: pulse 5s infinite;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+}
+
+#bunny:hover {
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    35% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(.85);
+    }
+    65% {
+      transform: scale(1.15);
+    }
+    80% {
+      box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

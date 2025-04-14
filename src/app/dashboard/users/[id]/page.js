@@ -9,6 +9,11 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusSquare, faMinusSquare } from '@fortawesome/free-solid-svg-icons'; // Specific icon import
 
+export const metadata = {
+    title: 'Profile ⑅ Users ⑅ Princess Rewards',
+    description: 'Profile ⑅ Users ⑅ Princess Rewards',
+}
+
 export default async function User( {params} ) {
     const { id } = await params
     const cookieStore = await cookies();

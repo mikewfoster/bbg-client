@@ -12,6 +12,10 @@ import { faPlusSquare, faMinusSquare, faTrash, faPencil } from '@fortawesome/fre
 
 library.add(faPlusSquare, faMinusSquare, faTrash, faPencil); // Add the icon to the library
 
+export const metadata = {
+    title: 'Manage ⑅ Rewards ⑅ Princess Rewards',
+    description: 'Manage ⑅ Rewards ⑅ Princess Rewards',
+}
 
 export default async function ManageDashboard() {
     const cookieStore = await cookies();

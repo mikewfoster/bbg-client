@@ -11,6 +11,36 @@ config.autoAddCss = false
 export const metadata = {
   title: 'Princess Rewards',
   description: 'Princess Rewards',
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: '32x32' },
+      { url: '/brand/favicon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/brand/favicon-57.png', sizes: '57x57', type: 'image/png' },
+      { url: '/brand/favicon-76.png', sizes: '76x76', type: 'image/png' },
+      { url: '/brand/favicon-96.png', sizes: '96x96', type: 'image/png' },
+      { url: '/brand/favicon-120.png', sizes: '120x120', type: 'image/png' },
+      { url: '/brand/favicon-128.png', sizes: '128x128', type: 'image/png' },
+      { url: '/brand/favicon-152.png', sizes: '152x152', type: 'image/png' },
+      { url: '/brand/favicon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/brand/favicon-196.png', sizes: '196x196', type: 'image/png' },
+      { url: '/brand/favicon-228.png', sizes: '228x228', type: 'image/png' },
+      {
+        url: '/brand/apple-touch-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    ],
+  },
+  openGraph: {
+    title: 'Princess Rewards',
+    description: 'Princess Rewards',
+    type: 'website',
+    url: 'https://bbg.fostercd.com'
+  },
+  other: {
+    "theme-color": "#173571",
+    "msapplication-TileColor": "#173571", 
+  }
 }
 
 import '@/scss/styles.scss';
