@@ -23,22 +23,36 @@ $bright-pink-crayola: #fb6087ff;
 $darkest-pink: #ee5b80;
 $dark-rose: #b1445f;
 
-$columbia-blue: #d3f0ffff;
-$uranian-blue: #ade2ffff;
-$light-sky-blue: #70cdffff;
-$picton-blue: #33b8ffff;
-$darkest-blue: #1f709b;
-$chathams-blue: #175272;
+// $columbia-blue: #d3f0ffff;
+// $uranian-blue: #ade2ffff;
+// $light-sky-blue: #70cdffff;
+// $picton-blue: #33b8ffff;
+// $darkest-blue: #1f709b;
+// $chathams-blue: #175272;
+
+$columbia-blue: #e3f5fe;
+$uranian-blue: #CCE1FF;
+$light-sky-blue: #4B9BF7;
+$picton-blue: #3074D4;
+$darkest-blue: #1D61B4;
+$chathams-blue: #223A82;
 
 $rich-black: #001e38;
 
 // Theme colors
-$primary-lighter: $misty-rose;
-$primary-light: $pink;
-$primary: $bakermiller-pink;
-$primary-dark: $bright-pink-crayola;
-$primary-darker: $darkest-pink;
-$primary-darkest: $dark-rose;
+// $primary-lighter: $misty-rose;
+// $primary-light: $pink;
+// $primary: $bakermiller-pink;
+// $primary-dark: $bright-pink-crayola;
+// $primary-darker: $darkest-pink;
+// $primary-darkest: $dark-rose;
+
+$primary-lighter: $columbia-blue;
+$primary-light: $uranian-blue;
+$primary: $light-sky-blue;
+$primary-dark: $picton-blue;
+$primary-darker: $darkest-blue;
+$primary-darkest: $chathams-blue;
 
 $secondary-lighter: $columbia-blue;
 $secondary-light: $uranian-blue;
