@@ -17,11 +17,12 @@ export default async function Dashboard() {
 
     let user = [];
     let points = [];
-    const currentDate = new Date(new Date().toLocaleString("en-US", {timeZone: "America/New_York"}));
-    
-    let show_game = (currentDate <= new Date('04/20/25'));
+    const currentDate = new Date();
+    const localDate = currentDate.toLocaleString("en-US", {timeZone: "America/New_York"}).split(',')[0];
+
+    let show_easter_game = (localDate <= '4/19/2025');
+    let show_easter_hunt = (localDate >= '4/19/2025' && localDate <= '4/20/2025');
     let game_active = true;
-    
 
     if (user_id && token) {
         const API_ROOT = `${process.env.NEXT_PUBLIC_API_URL}`;        
@@ -61,11 +62,8 @@ export default async function Dashboard() {
                 }
             })
             .then((result) => {
-                console.log(result);
                 points = result.points;
                 const easterPoints = points.filter(point => (point.title == 'Easter hunt'))
-
-                console.log(easterPoints);
                 
                 if (easterPoints.length >= 20) {
                     game_active = false;
@@ -91,8 +89,24 @@ export default async function Dashboard() {
                             </div>
                         </div>
 
-                        { show_game && 
+                        { show_easter_hunt && 
                             <div className="row g-4 pt-4 text-center">
+                                <div className="col"></div>
+                                <div className="col-12 col-md-8">
+                                    <div className="alert alert-secondary bg-secondary-darker p-4">
+                                        <h2 className="fs-1 font-fancy mb-3 text-light">A new game is here!</h2>
+                                        <p className="fs-5 text-light">Are you ready to search for&nbsp;Easter&nbsp;eggs? Don't wait, this game will be gone after Easter!</p>
+                                        <p className="mb-0">
+                                        <Link href={`/dashboard/games/easter/egg-hunt`} className="btn btn-secondary-lighter">Start hunting!</Link>
+                                        </p>
+                                    </div>  
+                                </div>
+                                <div className="col"></div>
+                            </div>
+                        }
+
+                        { show_easter_game && 
+                            <div className="row g-4 text-center">
                                 <div className="col"></div>
                                 <div className="col-12 col-md-8">
                                     { game_active && 

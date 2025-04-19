@@ -101,7 +101,7 @@ async function Game () {
                         <input type="hidden" name="username" id="username" value={username} />
                         <input type="hidden" name="user_id" id="user_id" value={user_id} />
                         <input type="hidden" name="token" id="token" value={token} />
-                        <input type="hidden" name="game" id="game" value="Easter hunt" />
+                        <input type="hidden" name="game" id="game" value="Easter Bunny hunt" />
                         <Button
                             type="submit"
                             id="bunny"

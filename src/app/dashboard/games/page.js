@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default async function Game( {} ) {
-    redirect(`/dashboard/games/easter`);  
+    redirect(`/dashboard/games/easter/egg-hunt`);  
 }
