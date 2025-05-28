@@ -64,6 +64,8 @@ export default async function User( {params} ) {
                 }
             })
             .then((result) => {
+                console.log(result);
+                
                 points = result.points;
                 
             })
@@ -164,6 +166,9 @@ export default async function User( {params} ) {
                                     <strong>{ point.title }</strong>
                                     <br />
                                     { point.description }
+                                    { point.notes && 
+                                        <p className="mt-2 mb-0"><em><strong>Reason: </strong> { point.notes }</em></p>
+                                    }
                                 </div>
                                 <div className="col-12 col-md-2 text-center text-md-start">
                                     <div className="d-inline d-md-none">

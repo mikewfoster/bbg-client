@@ -103,10 +103,12 @@ export default async function Grant( { searchParams } ) {
         const POINT_URL = `${API_ROOT}/users/${data.get('user_id')}/points`;
         const pointId = data.get('point_id') || null;
         const rewardId = data.get('reward_id') || null;
+        const notes = data.get('notes') || null;
 
         const body = { };
 
         body.username = data.get('username');
+        body.notes = notes;
         if (pointId) body.PointId = pointId;
         if (rewardId) body.RewardId = rewardId;
 
@@ -191,6 +193,13 @@ export default async function Grant( { searchParams } ) {
                                             ))}                              
                                         </select>
                                     </> }
+
+                                    <InputText
+                                        name="notes"
+                                        placeholder="Notes"
+                                        value=""
+                                        error=""
+                                    />
                                 </div>
                             </div>
                             

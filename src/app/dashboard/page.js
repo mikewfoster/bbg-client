@@ -21,7 +21,7 @@ export default async function Dashboard() {
     const localDate = currentDate.toLocaleString("en-US", {timeZone: "America/New_York"}).split(',')[0];
 
     let show_easter_game = (localDate <= '4/19/2025');
-    let show_easter_hunt = (localDate >= '4/19/2025' && localDate <= '4/20/2025');
+    let show_easter_hunt = (localDate >= '4/19/2025' && localDate <= '4/30/2025');
     let game_active = true;
 
     if (user_id && token) {

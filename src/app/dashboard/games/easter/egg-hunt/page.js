@@ -71,7 +71,9 @@ export default async function Easter() {
                                     </button>
                                 </div>
                             </div>
-                            <div className="game" style={{ "--cells": 3 }}>
+                            <div className="info-screen game-screen">
+                                <div className="title-screen__content info-screen__content">
+                                    <div className="game" style={{ "--cells": 3 }}>
                                 <div className="bunny">🐣</div>
                                 <div className="bunny">🐰</div>
                                 <svg
@@ -316,6 +318,8 @@ export default async function Easter() {
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
                                     </div>
                                 </div>
                             </div>
